@@ -14,27 +14,17 @@
             </div>
             <div class="input-row">
                 <label for="addTasks" id="addTasks" name="addTasks"></label>
-                <input type="text" placeholder="Input Your Tasks" />
-                <button type="button" id="btn" class="button">+</button>
+                <input type="text" id="input-box" placeholder="Input Your Tasks" />
+                <button type="button" id="btn" class="button" onclick="addTask()">+</button>
             </div>
-            <ul>
-                <li>task 1</li>
+            <ul id="list-container">
+                <!-- <li class="checked">task 1</li>
                 <li>task 2</li>
                 <li>task 3</li>
                 <li>task 4</li>
-                <li>task 5</li>
+                <li>task 5</li> -->
             </ul>
-            <div id="divider"></div>
-            <div class="tasks">
-            <h3>Your tasks for the day</h3> 
-            <button type="button">Remove</button>
-            </div>
         </div>
-
-
-
-
-
     <script src="./app.js"></script>
     </body>
 </html>
