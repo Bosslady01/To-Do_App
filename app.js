@@ -9,21 +9,25 @@ function addTask(parameters) {
 		li.innerHTML = InputBox.value;
 		ListContainer.appendChild(li);
 		let span = document.createElement("span");
-		span.innerHTML = "/u00d7";
+		span.innerHTML = "\u00d7";
 		li.appendChild(span);
 	}
 	InputBox.value = "";
 	saveData();
 }
-ListContainer.addEventListener("click" function (e) {
-	if(e.target.tagName === "LI"){
-		e.target.classList.toggle("checked");
-		saveData();
-	} else if(e.target.tagName === "SPAN"){
-		e.target.parentElement.remove();
-		saveData();
-	}
-}, false)
+ListContainer.addEventListener(
+        "click",
+        function (e) {
+                if (e.target.tagName === "LI") {
+                        e.target.classList.toggle("checked");
+                        saveData();
+                } else if (e.target.tagName === "SPAN") {
+                        e.target.parentElement.remove();
+                        saveData();
+                }
+        },
+        false
+);
 
 function saveData() {
 	localStorage.setItem("data", ListContainer.innerHTML);
